@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODI</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+</head>
+<body>
+<div id="header"></div>
+<div class="container">
+    <h1 class="text-success text-center mt-5">ODI</h1>
+    <div class="row" id="myrow">
+
+    </div>
+</div>
+<div id="footer"></div>
+    <script src="JS/bootstrap.bundle.js"></script>
+     <script src="JS/jquery-3.7.1.js"></script>
+     <script src="JS/data.js"></script>
+     <script>
+           $(document).ready(function(){
+            $("#header").load("header.html");
+               $("#footer").load("footer.html");
+        });
+        var myrow = document.getElementById("myrow");
+        for(var i = 0 ; i<odi.length ;i++)
+        {
+             myrow.innerHTML += `
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card"  style="width:18rem;">
+            <img src="${odi[i].Image}" class="card-img-top" style="height:200px">
+            <div class="card-body">
+                <h5 class="card-title">Year: ${t20[i].Year}</h5>
+                <p class="card-text">Winner: ${odi[i].Winner}</p>
+                <p class="card-text">Player of the Match: ${odi[i].POM}</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+            </div>
+            </div>   
+             `
+        }
+     </script>
+</body>
+</html>

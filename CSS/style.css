@@ -1,0 +1,5 @@
+.carousel-img {
+  width: 100%;
+  height: 500px;      /* apni requirement ke mutabiq */
+  object-fit: fill;  /* stretch nahi hogi, crop hogi — blur khatam */
+}
